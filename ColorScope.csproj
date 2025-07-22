@@ -6,6 +6,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  
+  <!-- Don't include tests! -->
+  <ItemGroup>
+    <Compile Remove="Test\**" />
+  </ItemGroup>
 
   <!-- Windows/Linux -->
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
