@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <!-- Windows/Linux -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <Description>Color debugging</Description>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ApplicationVersion>1.0</ApplicationVersion>
+    <PlatformTarget>x64</PlatformTarget> <!-- ✅ FIXED -->
+
+    <!-- AOT dan SingleFile gak bisa bareng -->
+    <PublishSingleFile>false</PublishSingleFile>
+
+    <OutputPath>bin/Build/</OutputPath>             <!-- Output build -->
+    <PublishDir>bin/Publish/</PublishDir>           <!-- Output publish -->
+
+    <!-- Optimization -->
+    <Optimize>true</Optimize>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
+    <!-- Trimming & Size Optimization -->
+    <PublishTrimmed>true</PublishTrimmed>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <StripSymbols>true</StripSymbols>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+
+    <!-- AOT Native Compilation -->
+    <PublishAot>true</PublishAot>
+    <IlcDisableReflection>true</IlcDisableReflection>
+    <IlcGenerateCompleteTypeMetadata>false</IlcGenerateCompleteTypeMetadata>
+
+    <!-- Compression -->
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="9.0.7" />
+  </ItemGroup>
+</Project>
