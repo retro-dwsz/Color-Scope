@@ -1,8 +1,3 @@
-Berikut contoh `README.md` yang profesional dan informatif untuk proyek tersebut:
-
----
-
-
 # 🎨 Image RGB Analyzer & ConsoleColor Mapper
 
 A small C# console app that:
