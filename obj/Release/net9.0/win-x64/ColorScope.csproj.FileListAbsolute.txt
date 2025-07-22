@@ -200,3 +200,4 @@ D:\Code\!Docs\Color Scope\obj\Release\net9.0\win-x64\refint\ColorScope.dll
 D:\Code\!Docs\Color Scope\obj\Release\net9.0\win-x64\ColorScope.pdb
 D:\Code\!Docs\Color Scope\obj\Release\net9.0\win-x64\ColorScope.genruntimeconfig.cache
 D:\Code\!Docs\Color Scope\obj\Release\net9.0\win-x64\ref\ColorScope.dll
+D:\Code\!Docs\Color Scope\obj\Release\net9.0\win-x64\ColorScope.sourcelink.json

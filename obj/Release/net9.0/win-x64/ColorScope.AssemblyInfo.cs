@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Color debugging")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a08e1d3d479f97992e81cd3cd81b013cc1d4e85d")]
 [assembly: System.Reflection.AssemblyProductAttribute("ColorScope")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ColorScope")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -53,6 +53,7 @@ class ColorText {
 
 class Program
 {
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static string RgbToHex(int red, int green, int blue)
     {
         // Ensure the RGB values are within the valid range (0-255)
@@ -69,6 +70,7 @@ class Program
         return "#" + redHex + greenHex + blueHex;
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static uint RgbToHexInt(int red, int green, int blue)
     {
         red = Math.Clamp(red, 0, 255);
@@ -79,6 +81,7 @@ class Program
         return (uint)((red << 16) | (green << 8) | blue);
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
     static void Main(string[] args)
     {
         // Ganti nama file gambar di sini
