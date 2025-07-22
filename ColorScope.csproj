@@ -9,37 +9,38 @@
 
   <!-- Windows/Linux -->
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <Description>Color debugging</Description>
     <OutputType>Exe</OutputType>
     <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>false</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
     <LangVersion>latest</LangVersion>
-    <ApplicationVersion>1.0</ApplicationVersion>
-    <PlatformTarget>x64</PlatformTarget> <!-- ✅ FIXED -->
-
-    <!-- AOT dan SingleFile gak bisa bareng -->
-    <PublishSingleFile>false</PublishSingleFile>
-
-    <OutputPath>bin/Build/</OutputPath>             <!-- Output build -->
-    <PublishDir>bin/Publish/</PublishDir>           <!-- Output publish -->
+    <PlatformTarget>x64</PlatformTarget>
 
     <!-- Optimization -->
     <Optimize>true</Optimize>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 
-    <!-- Trimming & Size Optimization -->
-    <PublishTrimmed>true</PublishTrimmed>
-    <InvariantGlobalization>true</InvariantGlobalization>
-    <StripSymbols>true</StripSymbols>
-    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
-
-    <!-- AOT Native Compilation -->
+    <!-- AOT -->
     <PublishAot>true</PublishAot>
     <IlcDisableReflection>true</IlcDisableReflection>
     <IlcGenerateCompleteTypeMetadata>false</IlcGenerateCompleteTypeMetadata>
 
-    <!-- Compression -->
+    <!-- Trimming -->
+    <PublishTrimmed>true</PublishTrimmed>
+    <StripSymbols>true</StripSymbols>
+    <InvariantGlobalization>true</InvariantGlobalization>
+
+    <!-- File Size -->
+    <PublishSingleFile>true</PublishSingleFile>
     <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>false</IncludeNativeLibrariesForSelfExtract>
+
+    <!-- Output -->
+    <OutputPath>bin/Build/</OutputPath>
+    <PublishDir>bin/Publish/</PublishDir>
   </PropertyGroup>
+  
   <ItemGroup>
     <PackageReference Include="System.Drawing.Common" Version="9.0.7" />
   </ItemGroup>
